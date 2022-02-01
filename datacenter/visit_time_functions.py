@@ -12,8 +12,7 @@ def is_visit_long(duration_visit, minutes=60):
     Returns:
         boolean: Длинный или нет визит
     """
-    return minutes * 60 <= (duration_visit.days * 24 * 3600) \
-        + duration_visit.seconds
+    return minutes * 60 <= duration_visit.total_seconds()
 
 
 def get_duration(passcard_visit):
