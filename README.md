@@ -26,5 +26,5 @@ Python3 должен быть уже установлен.
 
 ### Как запускать
 ```console
-python3 main.py
+python manage.py runserver 0.0.0.0:8000
 ```
