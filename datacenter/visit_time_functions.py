@@ -12,7 +12,7 @@ def is_visit_long(duration_visit, minutes=60):
     Returns:
         boolean: Длинный или нет визит
     """
-    return minutes <= duration_visit.seconds // 60:
+    return minutes <= duration_visit.seconds // 60
 
 
 def get_duration(visit):
