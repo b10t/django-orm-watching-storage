@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from visit_time_functions import format_duration, get_duration, is_visit_long
+from .visit_time_functions import format_duration, get_duration, is_visit_long
 
 from datacenter.models import Visit
 
