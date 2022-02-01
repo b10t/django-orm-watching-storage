@@ -16,11 +16,11 @@ def is_visit_long(duration_visit, minutes=60):
         + duration_visit.seconds
 
 
-def get_duration(visit):
+def get_duration(passcard_visit):
     """Расчитывает продолжительность по времени визита.
 
     Args:
-        visit (Visit): Запись из таблицы Visit
+        passcard_visit (Visit): Визит по карточке-пропуску
 
     Returns:
         timedelta: Разница во времени
@@ -28,9 +28,9 @@ def get_duration(visit):
     leaved_at = timezone.now()
 
     if leaved_at:
-        leaved_at = visit.leaved_at
+        leaved_at = passcard_visit.leaved_at
 
-    return localtime(leaved_at) - localtime(visit.entered_at)
+    return localtime(leaved_at) - localtime(passcard_visit.entered_at)
 
 
 def format_duration(duration_visit):
