@@ -1,13 +1,12 @@
 import os
 
-import dj_database_url
 from environs import Env
 
 env = Env()
 env.read_env()
 
 DATABASES = {
-    'default': dj_database_url.parse(env.str('DB_URL', ''))
+    'default': env.dj_db_url('DB_URL', '')
 }
 
 INSTALLED_APPS = ['datacenter']
